@@ -28,3 +28,5 @@ function StarRater(props) {
 StarRater.defaultProps = {
     rating: 0
 };
+
+export default StarRater;
