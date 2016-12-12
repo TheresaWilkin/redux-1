@@ -4,12 +4,14 @@ const initialRepositoryState = [];
 
 export const repositoryReducer = (state=initialRepositoryState, action) => {
     if (action.type === actions.ADD_REPOSITORY) {
+        console.log("add")
         return [...state, {
             name: action.repository,
             rating: null
         }];
     }
     else if (action.type === actions.RATE_REPOSITORY) {
+        console.log("rate");
         // Find the index of the matching repository
         const index = state.findIndex(repository =>
             repository.name === action.repository
